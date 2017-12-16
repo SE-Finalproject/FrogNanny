@@ -1,0 +1,18 @@
+.login_input {
+    padding: 10px;
+    display: table;
+}
+
+.login_input_icon {
+    padding: 6px 12px;
+    display: table-cell;
+    width: 10%;
+
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
