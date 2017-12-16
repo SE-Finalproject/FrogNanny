@@ -1,3 +1,9 @@
+.input-group-addon {
+    padding: 12px;
+}
+.form-control {
+    height: 46px;
+}
 .login_input {
     padding: 10px;
     display: table;
