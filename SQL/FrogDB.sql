@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機: localhost
--- 產生時間： 2017 年 12 月 18 日 16:12
+-- 產生時間： 2017 年 12 月 18 日 16:24
 -- 伺服器版本: 10.1.25-MariaDB
 -- PHP 版本： 5.6.31
 
@@ -43,7 +43,8 @@ CREATE TABLE `frogRecord` (
 
 INSERT INTO `frogRecord` (`id`, `family`, `genus`, `species`, `info`, `place`) VALUES
 (1, '樹蛙科', '樹蛙數', '莫氏樹蛙', '小小的', '濕濕的'),
-(2, '蟾蜍科', '蟾蜍屬', '海蟾蜍', '大大的', '海海的');
+(2, '蟾蜍科', '蟾蜍屬', '海蟾蜍', '大大的', '海海的'),
+(3, '赤蛙科', '側褶蛙屬', '金線蛙', '金金的', '水水的');
 
 -- --------------------------------------------------------
 
@@ -90,7 +91,7 @@ ALTER TABLE `user`
 -- 使用資料表 AUTO_INCREMENT `frogRecord`
 --
 ALTER TABLE `frogRecord`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- 使用資料表 AUTO_INCREMENT `user`
 --

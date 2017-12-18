@@ -3,7 +3,7 @@
     error_reporting(0);
     
     session_start();
-    require("dbconnect.php");
+    require("../dbconnect.php");
 
     //檢查是否有登入(cookie存在uID)， 沒有登入就到loginForm.php
     // if (!isset($_SESSION['uID']) or $_SESSION['uID'] <= 0) {
@@ -21,7 +21,7 @@
 <body  onload = "load();">
     <h2 align = center>生態資料庫</h2>
     <hr>
-    <form name = "theForm" method="post" action="Control.php">
+    <form name = "theForm" method="post" action="../Control.php">
         <table align = center border="1">
             <tr>
                 <th colspan="2">建檔</th>
