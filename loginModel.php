@@ -30,23 +30,23 @@
             return 0;
         }
     }
-    // //檢查該使用者是否為管理員
-    // function isAdmin($uID){
-    //     global $conn;
-    //     $uID=(int)$uID;
-    //     //產生SQL指令 從user資料表中查出該ID的管理員狀態
-    //     $sql = "SELECT role FROM user WHERE id = $uID"; 
-    //     //執行SQL查詢
-    //     if ($result = mysqli_query($conn,$sql)) { 
-    //         if ($row = mysqli_fetch_assoc($result)) {
-    //             if ($row['role'] == 1) {
-    //                 return true;
-    //             } else {
-    //                 //不是管理員
-    //                 return false;
-    //             }
-    //         }
-    //     }
-    //     return false;
+    //檢查該使用者是否為管理員
+    function isAdmin($uID){
+        global $conn;
+        $uID = (int)$uID;
+        //產生SQL指令 從user資料表中查出該ID的管理員狀態
+        $sql = "SELECT role FROM user WHERE id = $uID"; 
+        //執行SQL查詢
+        if ($result = mysqli_query($conn,$sql)) { 
+            if ($row = mysqli_fetch_assoc($result)) {
+                if ($row['role'] == 1) {
+                    return true;
+                } else {
+                    //不是管理員
+                    return false;
+                }
+            }
+        }
+        return false;
     // }
 ?>
