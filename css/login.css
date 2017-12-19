@@ -25,6 +25,15 @@
 #log {
     display: none;
 }
-.container #log.showLog {
+.container #log.showLog  {
     display: block;
+    padding-top: 100px; //it can work~~ <3
+    height:280px;
+    /*display:table-cell;*/
+}
+.container #log.showLog form {
+    height:280px;
+}
+form #login-form{
+    padding-top: 35px;
 }

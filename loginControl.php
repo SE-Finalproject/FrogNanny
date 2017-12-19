@@ -1,7 +1,7 @@
 <?php
     //啟用session 變數功能
     session_start(); 
-
+    $_SESSION['uID'] = 0;
     //引入檔案
     require_once('loginModel.php');
     $action =$_REQUEST['act'];
