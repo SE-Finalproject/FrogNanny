@@ -23,5 +23,5 @@
                 echo '<a href="template/index.php">[重新登錄]</a> ';
             }
         break;
-}
+    }
 ?>

@@ -2,6 +2,15 @@
     background-color: #e1fff0;
     border: solid 4px #9aba80;;
 }
+body div #zz {
+    width: 90%;
+    display: table;
+    padding: 20px 15px;
+    margin: auto;
+}
+/*.contain p {
+    padding: 20px 15px;
+}*/
 .container-fluid {
     padding-right: 15px;
     /*margin: 5px;*/
@@ -26,19 +35,7 @@
 .dropdown1 .dropdown-btn:hover {
     display: block;
 }
+/*it can work QQ*/
 .navbar-inverse .navbar-nav>.open>a:focus {
     background-color: #6d8662;
-}
-/*.dropdown1:hover {
-    display: block;
-}*/
-/*.dropdown-menu .dropdown_text:hover {
-    !background-color: #6d8662;
-}
-
-
-*/
-
-.dropdown., .dropdown-toggle.:hover {
-    background-color: red;
 }

@@ -8,47 +8,59 @@
   <link rel="stylesheet" type="text/css" href="../css/view.css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  <script type="text/javascript">
+      $(document).ready(function() {
+        $(".first_p").hide(0);
+        $(".second_p").hide(0);
+        $('.first_p').fadeIn(2000);
+        $('.second_p').fadeIn(4000);
+      });
+  </script>
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <p class="logo">Frog Nanny</p>
-      <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <p class="logo">Frog Nanny</p>
+        <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="view.html">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">物種<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="bootstrap.html" class="dropdown_text">青蛙</a></li>
+              <li><a href="#" class="dropdown_text">蝴蝶</a></li>
+              <!-- <li><a href="#">Page 1-3</a></li> -->
+            </ul>
+          </li>
+          <li><a href="#">Photo</a></li>
+          <li><a href="#">Search</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">物種<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="bootstrap.html" class="dropdown_text">青蛙</a></li>
-            <li><a href="#" class="dropdown_text">蝴蝶</a></li>
-            <!-- <li><a href="#">Page 1-3</a></li> -->
-          </ul>
-        </li>
-        <li><a href="#">Photo</a></li>
-        <li><a href="#">Search</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
   
-<div class="container">
-  <h3>Collapsible Navbar</h3>
-  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
-  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
-</div>
+  <div class="container">
+    <h2>Know about Frog Nanny</h2>
+    <p class="first_p">埔里的桃米社區是一處看似荒蕪沼澤、溪澗的大凹地，卻擁有全台灣種類最多的青蛙、蜻蛉和數量最多的螢火蟲，青蛙ㄚ婆－王惠美就這麼一頭栽入蛙蛙世界</p>
+    <p class="second_p">「埔里青蛙ㄚ婆ㄟ家民宿」主人夫婦在為一生事業而勞頓之後，看上桃米的環境，選擇在此退休。原在台中從事插花教學和會場佈置的王惠美，有著獨特的美感與自信，一手主導了民宿的規劃和房間的設計，卻也意外的臣服在青蛙、鳥兒等小動物的純真之下。</p>
+    <div><img id="i" src="../img/i1.jpg" style="width: 100%"></div>
+    <div><img class="image" src="../img/i3.jpg" style="width: 100%"></div>
+    <div><img class="image" src="../img/i5.jpg" style="width: 100%"></div>
+
+  </div>
 
 </body>
 </html>
