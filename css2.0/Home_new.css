@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+    font-family: Arial, Sans-serif;
+    /*padding: 20px;*/
+    background: #f1f1f1;
+}
+.header h2 {
+    padding: 150px 100px 100px 100px;
+    font-weight: lighter;
+
+    color: white;
+    background-color: rgba(94, 94, 94, 0.26);
+    margin: 0px;
+}
+/* Header/Blog Title */
+.header {
+    background-image: url("../img/i3.jpg");
+    /*padding: 30px 0px 0px 0px;*/
+    font-size: 40px;
+    text-align: center;
+    /*background: white;*/
+}
+/*nav*/
+.navbar {
+    /*position: relative;*/
+    overflow: hidden;
+    background-color: rgba(81, 81, 81, 0.44);
+    font-family: Arial;
+    padding: 0px 16px;
+    /*background: transparent;*/
+    color: #f1f1f1;
+    line-height: 20px;
+    top: 0;
+}
+
+.navbar a {
+    float: left;
+    font-size: 25px;
+    color: white;
+    line-height: 25px;
+    padding: 26px 16px;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*background-color: inherit;*/
+}
+.navbar ul li {
+    background-color: inherit;
+    float: left;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 23px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 25px 16px;
+    margin: 0;
+    background-color: inherit;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(99, 202, 133, 0.7);
+    border-bottom: 3px solid red;
+}
+
+.dropdown-content {
+    display: none; /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 20px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    border-bottom: 3px solid transparent;
+}
+/*.show {display:block;} /*add*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar .logout {
+    float: right !important;
+}
+.navbar .logout :hover {
+    background-color: inherit;
+    color: red;
+    border-bottom: 3px solid transparent;
+}
+/*nav end*/
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: rgba(170, 170, 170, 0.57);
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+.row {
+  padding: 16px 0px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 98.9%;
+  padding-top: 0px;
+  background-color: #555;
+  /*right: 29px;*/
+  /*left: 29px;*/
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 800px) {
+    .leftcolumn, .rightcolumn, .sticky {   
+        width: 100%;
+        padding: 0;
+    }
+}

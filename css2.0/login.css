@@ -1,0 +1,135 @@
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 18px 20px;
+    /*margin: 8px 0;*/
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin: 0px;
+    border: 2px solid #ccc;
+    font-size: 20px;
+
+}
+/* Set a style for all buttons */
+.cancelbtn, .submit{
+    width: 97%;
+    
+    padding: 14px 20px;
+    margin: 8px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 20px;
+}
+.submit {
+    margin: 50px 10px;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.topcontainer {
+    padding: 25px;
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    padding: 16px;
+}
+.first {
+    padding: 50px 16px 50px 16px;
+}
+span.password {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The login_div (background) 整個版面*/
+.login_div {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box  調整彈出視窗大小*/
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    /*z-index: 4;*/
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #25788a;
+    font-size: 35px;
+    font-weight: bold;
+}
+/*關閉視窗的符號(didn't active)*/
+/*span.close :hover,
+.close :focus {
+    color: red;
+    cursor: pointer;
+}*/
+
+/* Add Zoom Animation 調整彈出秒數*/
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 1.2s
+}
+/*----------------------------------------------*/
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+.login_input {
+    padding: 10px;
+    display: table;
+}
+
+.login_input_icon {
+    padding: 6px 6px;
+    display: table-cell;
+    width: 10%;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Sans-serif;
+}
