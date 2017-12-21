@@ -96,7 +96,7 @@ body {
     border-bottom: 3px solid transparent;
 }
 
-.dropdown:hover .dropdown-content, .sticky.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
