@@ -15,7 +15,7 @@
 <head>
     <!-- <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5"> -->
     <meta charset="utf-8">
-    <script type="text/javascript" src="../javascript/FrogUpload.js"></script>
+    <script type="text/javascript" src="../javascript2.0/FrogUpload.js"></script>
 </head>
 
 <body  onload = "load();">
