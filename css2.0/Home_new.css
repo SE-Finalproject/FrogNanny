@@ -2,33 +2,29 @@
     box-sizing: border-box;
 }
 
-/* Add a gray background color with some padding */
 body {
-    font-family: Arial, Sans-serif;
-    /*padding: 20px;*/
+    font: 20px 'Helvetica Neue', Arial, Sans-serif;
     background: #f1f1f1;
+    /*margin: 0px;*/
 }
 .header h2 {
-    padding: 150px 100px 100px 100px;
-    font-weight: lighter;
-
+    padding: 150px 100px 120px 100px;
+    font-weight: 200;
     color: white;
     background-color: rgba(94, 94, 94, 0.26);
     margin: 0px;
 }
-/* Header/Blog Title */
+/*Wed Title */
 .header {
     background-image: url("../img/i3.jpg");
-    /*padding: 30px 0px 0px 0px;*/
     font-size: 40px;
     text-align: center;
     background-size: 100%;
 }
 /*nav*/
 .navbar {
-    /*position: relative;*/
-    overflow: hidden;
-    background-color: rgba(81, 81, 81, 0.44);
+    /*overflow: hidden;*/ /*自動隱藏超出的文字、內容*/
+    background-color: rgba(23, 23, 23, 0.44);
     font-family: Arial;
     padding: 0px 16px;
     /*background: transparent;*/
@@ -51,7 +47,6 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    /*background-color: inherit;*/
 }
 .navbar ul li {
     background-color: inherit;
@@ -100,13 +95,13 @@ body {
     background-color: #ddd;
     border-bottom: 3px solid transparent;
 }
-/*.show {display:block;} /*add*/
-.dropdown:hover .dropdown-content {
+
+.dropdown:hover .dropdown-content, .sticky.dropdown:hover .dropdown-content {
     display: block;
 }
 
 .navbar .logout {
-    float: right !important;
+    float: right;  /*float: right !important;*/
 }
 .navbar .logout :hover {
     background-color: inherit;
@@ -166,16 +161,18 @@ body {
   position: fixed;
   top: 0;
   width: 98.9%;
+  /*width: 100%;*/
   padding-top: 0px;
   background-color: #555;
-  /*right: 29px;*/
-  /*left: 29px;*/
 }
+/*.stick:hover .dropdown-content {
+    display: block;
+}*/
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media (max-width: 800px) {
+/*@media (max-width: 800px) {
     .leftcolumn, .rightcolumn, .sticky {   
         width: 100%;
         padding: 0;
     }
-}
+}*/
