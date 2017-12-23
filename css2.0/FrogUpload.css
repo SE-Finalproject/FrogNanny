@@ -7,13 +7,13 @@ body {
 .FormHeader {
     background-image: url("../img/frog2.0.jpg");
     font-size: 40px;
-    /*text-align: center;*/
     background-size: cover;
     /*height: 60%;*/
     /*background-size: 100%;*/
 }
 .FormContain {
-    margin-top: -150px;
+    text-align: right;
+    margin-top: -100px;
 }
 .viewFrom {
     background: white;
@@ -22,15 +22,17 @@ body {
 }
 
 .FormHeader h2 {
-    padding: 165px 50px 165px 50px;
+    padding: 175px 50px 175px 50px;
     color: white;
     font-weight: 300;
+    margin: 0;
+    background: rgba(242, 242, 242, 0.17);
 }
 /*返回按鈕*/
 div .back {
     position: absolute;
-    top: 46%;
-    right: 25px;
+    top: 390px;
+    right: 20px;
     cursor: pointer;
 }
 .back a {
