@@ -6,36 +6,31 @@ body {
 }
 .FormHeader {
     background-image: url("../img/frog2.0.jpg");
-    /*padding: 30px 0px 0px 0px;*/
     font-size: 40px;
-    text-align: center;
-    background-size: 100%;
-    padding: 165px 50px 160px 50px;
+    /*text-align: center;*/
+    background-size: cover;
+    /*height: 60%;*/
     /*background-size: 100%;*/
 }
 .FormContain {
-    margin-top: -100px;
+    margin-top: -150px;
 }
 .viewFrom {
     background: white;
     width: 50%;
     margin: auto;
 }
-/*h2 {
-    font-weight: normal;
-    padding: 25px;
-    margin: 0;
-}*/
+
 .FormHeader h2 {
+    padding: 165px 50px 165px 50px;
     color: white;
-    font-weight: normal;
+    font-weight: 300;
 }
 /*返回按鈕*/
 div .back {
-    /*text-align:right;*/
     position: absolute;
-    bottom: -30px;
-    right: 20px;
+    top: 46%;
+    right: 25px;
     cursor: pointer;
 }
 .back a {
