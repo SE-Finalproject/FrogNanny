@@ -2,7 +2,7 @@
     require("dbconnect.php");
     global $conn;
     // $text = strip_tags(substr(,0, 100));
-    $text = mysqli_real_escape_string($conn, $_REQUEST['search_term']);
+    $text = mysqli_real_escape_string($conn, $_REQUEST['search_val']);
     if(empty($text)) {  //如果為空
         echo "<script type='text/javascript'>alert('不可為空喔! 請輸入內容^_^');</script>";
     } else {
