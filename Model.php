@@ -1,6 +1,7 @@
 <?php
     require("dbconnect.php");
 
+    // show frog list
     function getFrogList() {
         global $conn;
         $sql = "SELECT frogrecord.* FROM frogrecord";
