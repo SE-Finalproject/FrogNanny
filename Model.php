@@ -19,6 +19,20 @@
             return false;
         }
     }
+    
+    function updateFrog($id, $species, $info, $place) {
+        global $conn;
+        
+            $species = mysqli_real_escape_string($conn, $species);
+            $info = mysqli_real_escape_string($conn, $info);
+            $place = mysqli_real_escape_string($conn, $place);
+            $id = (int)$id;
+            
+        if ($species and $id) { //if species is not empty
+            $sql = "update frogrecord set species='$species', info ='$info', place='$place' where id=$id;";
+        mysqli_query($conn, $sql) or die("Insert failed, SQL query error"); //執行SQL
+	}
+}
 ?>
 <!DOCTYPE>
 <html>

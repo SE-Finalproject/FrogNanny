@@ -3,7 +3,7 @@
     require("dbconnect.php");
     require_once('Model.php');
     $action =$_REQUEST['act'];
-
+    // 這是新版XD
     switch ($action) {
         //新增
         case 'insert':
@@ -15,6 +15,14 @@
             insertFrog($family, $genus, $species, $info, $place);
             echo $species;
         break;
+        
+        case 'update' :
+            $id = (int) $_REQUEST['id'];
+            $species=$_REQUEST['species'];
+            $info=$_REQUEST['info'];
+            $place=$_REQUEST['place'];
+            updateFrog($id, $species, $info, $place);
+           
     }
 ?>
 <!DOCTYPE>
