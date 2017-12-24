@@ -6,12 +6,14 @@
     <script type="text/javascript" src="../javascript2.0/login.js"></script>
     <link rel="stylesheet" type="text/css" href="../css2.0/login.css">
     <link rel="stylesheet" type="text/css" href="../css2.0/Home_new.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../javascript2.0/load.js"></script>
 </head>
-<body>
+<body onload="loadURL('home.php','.contain')">
     <div class="header"><h2>Flog Nanny</h2>
         <div class="navbar" id="navbar">
           <ul>
-              <li><a href="Blog_layout.html">Home</a></li>
+              <li><a href="#" onclick="loadURL('home.php','.contain')">Home</a></li>
               <li>
                   <div class="dropdown">
                     <button class="dropbtn">物種 <!-- <i class="fa fa-caret-down"></i> -->
@@ -23,7 +25,7 @@
                   </div> 
               </li>
               <li><a href="#">Photo</a></li>
-              <li><a href="SearchView.html">Search</a></li>
+              <li><a href="#" onclick="loadURL('SearchView.html','.contain')">Search</a></li>
               <li class="logout"><a href="#" onclick="showLoginDiv()"><span>&#8998;</span>Log out</a></li>
           </ul>
         </div>
@@ -39,11 +41,11 @@
         <div class="container first">
             <div class="login_input">
               <span class="login_input_title">Username</span>
-              <input type="text" placeholder="Enter Username or Email" name="userID" required>
+              <input type="text" placeholder="Enter Username or Email" name="userID" class="login_input_text" required>
             </div>
             <div class="login_input">
               <span class="login_input_title">Password</span>
-              <input type="password" placeholder="Enter Password" name="password" required>
+              <input type="password" placeholder="Enter Password" name="password" class="login_input_text" required>
             </div>
             
           <button type="submit" class="submit">Login</button>
@@ -55,8 +57,8 @@
         </div>
       </form>
     </div>
-
-    <div class="row" id="row">
+    <div class="contain"></div>
+    <!-- <div class="row" id="row">
       <div class="leftcolumn">
         <div class="card" id="card">
           <h1>Know about Frog Nanny</h1>
@@ -89,8 +91,9 @@
           <h3>Follow Me</h3>
           <p>Some text..</p>
         </div> -->
-      </div>
-    </div>
+      <!-- </div> -->
+    <!--</div>-->
+
     <script>
         window.onscroll = function() {myFunction()};
         var header = document.getElementById("navbar");
@@ -105,9 +108,9 @@
           }
         }
     </script>
-    <div class="footer">
+    <!-- <div class="footer">
       <h2>Footer</h2>
-    </div>
+    </div> -->
 </body>
 </html>
 

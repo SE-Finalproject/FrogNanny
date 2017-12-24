@@ -1,4 +1,4 @@
-input[type=text], input[type=password] {
+.login_input_text {
     width: 100%;
     padding: 18px 20px;
     /*margin: 8px 0;*/
