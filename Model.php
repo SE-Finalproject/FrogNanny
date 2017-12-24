@@ -19,7 +19,7 @@
             return false;
         }
     }
-    
+
     function updateFrog($id, $species, $info, $place) {
         global $conn;
         
@@ -31,8 +31,15 @@
         if ($species and $id) { //if species is not empty
             $sql = "update frogrecord set species='$species', info ='$info', place='$place' where id=$id;";
         mysqli_query($conn, $sql) or die("Insert failed, SQL query error"); //執行SQL
-	}
-}
+        }
+    }
+
+    function getFrogList() {
+        global $conn;
+        $sql = "SELECT frogrecord.* FROM frogrecord";
+        return mysqli_query($conn, $sql);
+    }
+
 ?>
 <!DOCTYPE>
 <html>
@@ -42,7 +49,7 @@
     </head>
     <body>
         <?php
-            echo "vvvvvv";
+            echo "vvvvvvwww";
         ?>
         <!-- <a href='view.php'>執行完成，回留言板</a> -->
     </body>

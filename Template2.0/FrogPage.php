@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    require("../Model.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -199,6 +204,30 @@
             <div class="fakeimg" style="height:100px;">Image</div>
             <p style="height:300px;">Some text about me in culpa qui officia deserunt mollit anim..Some text about me in culpa qui officia deserunt mollit anim..Some text about me in culpa qui officia deserunt mollit anim..Some text about me in culpa qui officia deserunt mollit anim..Some text about me in culpa qui officia deserunt mollit anim..Some text about me in culpa qui officia deserunt mollit anim..Some text about me in culpa qui officia deserunt mollit anim..</p>
         </div>
+
+        <table width="500" border="1">
+
+            <tr>
+                <td>科</td>
+                <td>屬</td>
+                <td>種</td>
+                <td>資訊</td>
+                <td>棲息地</td>
+            </tr>
+            <?php
+                $results = getFrogList();
+                while ($rs = mysqli_fetch_array($results)) {
+                    echo "<tr><td>", $rs['family'], "<br/>",
+                    "</td><td>", $rs['genus'],
+                    "</td><td>", $rs['species'],
+                    "</td><td>", $rs['info'],
+                    "</td><td>", $rs['place'],
+                    "</td></tr>";
+                }
+            ?>
+
+        </table>
+
     </div>
 </div>
 
