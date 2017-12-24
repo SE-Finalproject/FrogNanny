@@ -23,6 +23,7 @@
             $place=$_REQUEST['place'];
             updateFrog($id, $species, $info, $place);
             header('Location:frog.php');
+        break;
     }
 ?>
 <!DOCTYPE>
