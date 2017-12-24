@@ -13,8 +13,8 @@ function search() {
     // $("#search_results").show(); 
     // var search_val = $("#search_term").val(); 
     $.ajax({
-        type:"GET",
-        url: "search.php",
+        type:"POST",
+        url: "../search.php",
         data: {search_val : $("#search_term").val()},
         success: function(data) {
             if (data.length > 0) {
