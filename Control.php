@@ -1,7 +1,7 @@
 <?php
     session_start();
     require("dbconnect.php");
-    require_once('Model.php');
+    require_once('./Model.php');
     $action =$_REQUEST['act'];
     // 這是新版XD
     switch ($action) {
@@ -24,7 +24,16 @@
             updateFrog($id, $species, $info, $place);
             header('Location:frog.php');
         break;
+        
+        case 'delet' :
+            $id = (int)$_REQUEST['id'];
+            if ($id > 0) {
+                deletFrog($id);
+            }
+            header('Location:frog.php');
+        break;
     }
+    
 ?>
 <!DOCTYPE>
 <html>

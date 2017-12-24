@@ -11,11 +11,27 @@ $(document).ready(function(){
 });
 function search() {
     // $("#search_results").show(); 
-    var search_val = $("#search_term").val(); 
-    $.post("../search.php", {search_term : search_val}, function(data){
-        console.log(search_val);
-        if (data.length > 0) { 
-            $("#search_results").html(data); 
+    // var search_val = $("#search_term").val(); 
+    $.ajax({
+        type:"GET",
+        url: "search.php",
+        data: {search_val : $("#search_term").val()},
+        success: function(data) {
+            if (data.length > 0) {
+                $("#search_results").html(data);
+            }
+            // else {
+            //     $("#searchResult").html(data.msg);
+            // }
+        },
+        error: function(jqXHR) {
+            alert("發生錯誤: " + jqXHR.status);
         }
-    });
+    })
+    // $.post("../search.php", {search_term : search_val}, function(data){
+    //     console.log(search_val);
+    //     if (data.length > 0) { 
+    //         $("#search_results").html(data); 
+    //     }
+    // });
 } 

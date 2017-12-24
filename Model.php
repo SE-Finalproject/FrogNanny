@@ -1,6 +1,12 @@
 <?php
     require("dbconnect.php");
 
+    function getFrogList() {
+        global $conn;
+        $sql = "SELECT frogrecord.* FROM frogrecord";
+        return mysqli_query($conn, $sql);
+    }
+
     function insertFrog($family='', $genus='', $species='', $info='', $place='') {
         global $conn;
 
@@ -34,10 +40,14 @@
         }
     }
 
-    function getFrogList() {
+    function deletFrog($id){
         global $conn;
-        $sql = "SELECT frogrecord.* FROM frogrecord";
-        return mysqli_query($conn, $sql);
+        
+        //對$id 做基本檢誤
+        $id = (int) $id;
+        //產生SQL
+        $sql = "delete from frogrecord where id=$id;";
+        return mysqli_query($conn, $sql); //執行SQL
     }
 
 ?>
