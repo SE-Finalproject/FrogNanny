@@ -2,16 +2,16 @@ $(document).ready(function(){
     // $("#search_results").slideUp(); 
     $("#search_button").click(function(e){ 
         e.preventDefault(); 
-        ajax_search(); 
+        search(); 
     }); 
     // $("#search_term").keyup(function(e){ 
     //     e.preventDefault(); 
-    //     ajax_search(); 
+    //     search(); 
     // }); 
 });
-function ajax_search() {
+function search() {
     // $("#search_results").show(); 
-    var search_val=$("#search_term").val(); 
+    var search_val = $("#search_term").val(); 
     $.post("../search.php", {search_term : search_val}, function(data){
         console.log(search_val);
         if (data.length > 0) { 
