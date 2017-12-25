@@ -106,10 +106,14 @@
   </div>
   </div>
 </nav>
+
 <div class="container">
     <div class="row">
         <div class="col-lg-9 mb-sm-3">
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+               
+             <button type="button" onclick="location.href='Template/FrogUpload.php'">新增</button>
+              &nbsp
               <li class="nav-item">
                 <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">樹蛙科</a>
               </li>

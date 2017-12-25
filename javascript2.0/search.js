@@ -18,6 +18,7 @@ function search() {
         data: {search_val : $("#search_term").val()},
         success: function(data) {
             if (data.length > 0) {
+                $("#search_results_table").show();
                 $("#search_results").html(data);
             }
             // else {

@@ -1,5 +1,6 @@
 <?php
-    echo"<div class=\"row\" id=\"row\">
+    echo "
+    <div class=\"row\" id=\"row\">
       <div class=\"leftcolumn\">
         <div class=\"card\" id=\"card\">
           <h1>Know about Frog Nanny</h1>

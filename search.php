@@ -5,6 +5,7 @@
     $text = mysqli_real_escape_string($conn, $_REQUEST['search_val']);
     if(empty($text)) {  //如果為空
         echo "<script type='text/javascript'>alert('不可為空喔! 請輸入內容^_^');</script>";
+        echo "<script>document.getElementById('search_results_table').style.display='none';</script>";
     } else {
         $sql = $sql="SELECT * FROM `frogRecord` WHERE info LIKE '%$text%'"; 
         $result = mysqli_query($conn, $sql);

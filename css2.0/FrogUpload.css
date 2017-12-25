@@ -3,6 +3,7 @@
 }
 body {
     font: 20px 'Helvetica Neue', 'Verdana', Arial;
+    background: rgb(245, 255, 195);
 }
 .FormHeader {
     background-image: url("../img/frog2.0.jpg");
@@ -37,7 +38,8 @@ div .back {
 }
 .back a {
     padding: 14px 50px;
-    background: rgb(255, 136, 122);border-radius: 4px;cursor: pointer;
+    background: rgb(255, 136, 122);border-radius: 4px;
+    cursor: pointer;
     font-size: 20px;
     color: white;
     text-decoration: none;
