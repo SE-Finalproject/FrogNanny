@@ -1,0 +1,31 @@
+#search_term {
+    background-image: url('https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png');
+    background-position: 15px 15px;
+    background-repeat: no-repeat;
+    /*width: 30%;*/
+    font-size: 20px;
+    padding: 12px 20px 12px 50px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    /*margin: 5px;*/
+    /*margin-bottom: 12px;*/
+}
+#search_button {
+    padding: 12px 25px;
+    background: rgb(218, 255, 141);
+    font-size: 20px;
+    /*margin: 5px;*/
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.Search_contain {
+    background: rgba(166, 181, 180, 0.52);
+    margin: 30px 0px 0px 0px;
+    padding: 25px 25px;
+}
+#search_results_table {
+    display: none;
+    background: white;
+    margin: 30px 0px 0px 0px;
+    padding: 10px 25px;
+}
