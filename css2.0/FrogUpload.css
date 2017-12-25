@@ -3,6 +3,7 @@
 }
 body {
     font: 20px 'Helvetica Neue', 'Verdana', Arial;
+    background: rgb(245, 255, 195);
 }
 .FormHeader {
     background-image: url("../img/frog2.0.jpg");
