@@ -5,15 +5,17 @@
     function checkUP($userAccount, $passWord) {
         global $conn;
         //將特殊SQL字元編碼，以免被SQL Injection
+        $passWord = mysqli_real_escape_string($conn, $passWord); 
         $userAccount = mysqli_real_escape_string($conn, $userAccount); 
         //產生SQL指令 查詢該帳號(userAccount = loginID)的密碼
-        $sql = "SELECT password, id FROM user WHERE uid ='$userAccount'";
+        $sql = "SELECT * FROM user WHERE PASSWORD('$passWord') = password";
+        // $sql = "SELECT password, id FROM user WHERE uid ='$userAccount'";
          //執行SQL查詢
         if ($result = mysqli_query($conn, $sql)) { 
             //取得第一筆資料
             if ($row = mysqli_fetch_assoc($result)) { 
                 //比對密碼
-                if ($row['password'] == $passWord) { 
+                if ($num = mysqli_num_rows($result)) { 
                     //密碼相符就回傳使用者的id編號
                     return $row['id'];
                     echo "string";

@@ -10,7 +10,7 @@
         case 'login':
 
             //取得從loginForm.php表單傳來之POST參數
-            $userAccount = $_POST['userID']; echo "iiii";
+            $userAccount = $_POST['userID'];
             $passWord = $_POST['password'];
             //比對密碼
             if ($userID = checkUP($userAccount, $passWord)) { 
@@ -20,7 +20,7 @@
             } else {
                 //print error message
                 echo "Invalid Username or Password - Try again <br />";
-                echo '<a href="template/index.php">[重新登錄]</a> ';
+                echo '<a href="template2.0/Blog_layout.html">[重新登錄]</a> ';
             }
         break;
     }
