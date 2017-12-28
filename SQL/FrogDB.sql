@@ -99,7 +99,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `uid`, `password`, `name`, `role`) VALUES
 (1, 'zz', '*A4B6157319038724E3560894F7F932C8886EBFCF', 'zong', 1),
-(2, 'given', '*40FB4A697648404BC101C9C76DD514566ED41419', 'givonQQ', 0);
+(2, 'givon', '*40FB4A697648404BC101C9C76DD514566ED41419', 'givonQQ', 0);
 
 --
 -- 已匯出資料表的索引
