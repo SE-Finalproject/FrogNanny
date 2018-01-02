@@ -22,56 +22,7 @@
     </style>
 </head>
 <body>
-<!-- <div class="header"><h2>Flog Nanny</h2>
-    <div class="navbar" id="navbar">
-      <ul>
-          <li><a href="Blog_layout.html">Home</a></li>
-          <li>
-              <div class="dropdown">
-                <button class="dropbtn">物種
-                </button>
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="frog.html">青蛙</a>
-                  <a href="butterfly.html">蝴蝶</a>
-                </div>
-              </div> 
-          </li>
-          <li><a href="#">Photo</a></li>
-          <li><a href="#">Search</a></li>
-          <li class="logout"><a href="#" onclick="showLoginDiv()"><span>&#8998;</span>Log out</a></li>
-      </ul>
-    </div>
-    
-</div>
 
-<div>
-
-<div id="login_div" class="login_div">
-  <form class="modal-content animate" action="../loginControl.php" method="POST">
-    <input type="hidden" name="act" value="login">
-    <div class="topcontainer">
-      <span onclick="closeLoginDiv()" class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="container first">
-        <div class="login_input">
-          <span class="login_input_icon">Username</span>
-          <input type="text" placeholder="Enter Username or Email" name="userID" required>
-        </div>
-        <div class="login_input">
-          <span class="login_input_icon">Password</span>
-          <input type="password" placeholder="Enter Password" name="password" required>
-        </div>
-        
-      <button type="submit" class="submit">Login</button>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="closeLoginDiv()" class="cancelbtn">Cancel</button>
-      <span class="password">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div> -->
 
 <div class="header py-5">
     <h1 class="py-5">Frog</h1>
@@ -113,101 +64,11 @@
             
            <button type="button" onclick="location.href='FrogUpload.php'">新增</button>
            &nbsp
-              <li class="nav-item">
-                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">樹蛙科</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">蟾蜍科</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">赤蛙科</a>
-              </li>
-            </ul>
-            <div class="tab-content" id="pills-tabContent">
-              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                <div class="row">
-                  <div class="col-md-6 mb-2">
-                    <div class="card" style="width: 20rem;">
-                        <div class="text-center">
-                            <img style="width: 85%;" class="card-img-top" src="http://www.ellison.idv.tw/www/Gallery/2007/20071127/15.jpg" alt="Card image cap">
-                        </div>
-                      <div class="card-body">
-                        <h4 class="card-title">莫氏樹蛙</h4>
-                        <p class="card-text">特徵: 小小的</p>
-                        <p class="card-text">棲息地: 濕濕的</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-2">
-                    <div class="card" style="width: 20rem">
-                        <div class="text-center">
-                            <img style="width: 85%;" class="card-img-top" src="http://www.ellison.idv.tw/www/Gallery/2007/20071127/15.jpg" alt="Card image cap">
-                        </div>
-                      <div class="card-body">
-                        <h4 class="card-title">莫氏樹蛙</h4>
-                        <p class="card-text">特徵: 小小的</p>
-                        <p class="card-text">棲息地: 濕濕的</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                <div class="row">
-                  <div class="col-md-6 mb-2">
-                    <div class="card">
-                      <div class="card-body">
-                        <h4 class="card-title">海蟾蜍</h4>
-                        <p class="card-text">特徵: 大大的</p>
-                        <p class="card-text">棲息地: 海海的</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-2">
-                    <div class="card">
-                      <div class="card-body">
-                        <h4 class="card-title">Special title treatment</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <div class="row">
-                  <div class="col-md-6 mb-2">
-                    <div class="card">
-                      <div class="card-body">
-                        <h4 class="card-title">金線蛙</h4>
-                        <p class="card-text">特徵: 金金的</p>
-                        <p class="card-text">棲息地: 水水的</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-2">
-                    <div class="card">
-                      <div class="card-body">
-                        <h4 class="card-title">Special title treatment</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              
+              
+                
         </div>
-        <div class="col-lg-3">
-            <h2>About Me</h2>
-            <div class="fakeimg" style="height:100px;">Image</div>
-            <p style="height:300px;">Some text about me in culpa qui officia deserunt mollit anim..Some text about me in culpa qui officia deserunt mollit anim..Some text about me in culpa qui officia deserunt mollit anim..Some text about me in culpa qui officia deserunt mollit anim..Some text about me in culpa qui officia deserunt mollit anim..Some text about me in culpa qui officia deserunt mollit anim..Some text about me in culpa qui officia deserunt mollit anim..</p>
-        </div>
-
+       
         <table class="tbspan" width="600" border="1">
 
             <tr>
@@ -234,33 +95,10 @@
     </div>
 </div>
 
-    <!-- <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div>
-    </div> -->
-    <!-- <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
-    </div> -->
+
   </div>
 </div>
-<!-- <script>
-    window.onscroll = function() {myFunction()};
 
-    var header = document.getElementById("navbar");
-    // var row = document.getElementById("row");
-    var sticky = header.offsetTop;
-    
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        header.classList.add("sticky");
-      } else {
-        header.classList.remove("sticky");
-      }
-    }
-</script>-->
 <div class="footer">
   <h2>Footer</h2>
 </div>
