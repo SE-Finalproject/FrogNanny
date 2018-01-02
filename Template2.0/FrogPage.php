@@ -30,7 +30,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
 <div class="container">
-  <a class="navbar-brand" href="Blog_layout.html">Home</a>
+  <a class="navbar-brand" href="FrogHome.html">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -42,7 +42,7 @@
           物種
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="frog.html">青蛙</a>
+          <a class="dropdown-item" href="FrogPage.php">青蛙</a>
           <a class="dropdown-item" href="butterfly.html">蝴蝶</a>
         </div>
       </li>

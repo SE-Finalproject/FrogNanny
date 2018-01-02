@@ -20,7 +20,7 @@
             } else {
                 //print error message
                 echo "Invalid Username or Password - Try again <br />";
-                echo '<a href="template2.0/Blog_layout.html">[重新登錄]</a> ';
+                echo '<a href="template2.0/FrogHome.html">[重新登錄]</a> ';
             }
         break;
     }
