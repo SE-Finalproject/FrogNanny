@@ -10,13 +10,10 @@
     for ($i = 0; $i < $fileCount; $i++) {
         # 檢查檔案是否上傳成功
         if ($_FILES['image_uploads']['error'][$i] === UPLOAD_ERR_OK){
-            echo '檔案名稱: ' . $_FILES['image_uploads']['name'][$i] . '<br/>';
-            echo '檔案類型: ' . $_FILES['image_uploads']['type'][$i] . '<br/>';
-            echo '檔案大小: ' . ($_FILES['image_uploads']['size'][$i] / 1024) . ' KB<br/>';
-            echo '暫存名稱: ' . $_FILES['image_uploads']['tmp_name'][$i] . '<br/>';
-
-           
-
+            // echo '檔案名稱: ' . $_FILES['image_uploads']['name'][$i] . '<br/>';
+            // echo '檔案類型: ' . $_FILES['image_uploads']['type'][$i] . '<br/>';
+            // echo '檔案大小: ' . ($_FILES['image_uploads']['size'][$i] / 1024) . ' KB<br/>';
+            // echo '暫存名稱: ' . $_FILES['image_uploads']['tmp_name'][$i] . '<br/>';
             # 檢查檔案是否已經存在
             if (file_exists('img/upload/' . $_FILES['image_uploads']['name'][$i])){
                 echo '檔案已存在。<br/>';
