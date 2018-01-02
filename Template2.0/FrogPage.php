@@ -22,56 +22,7 @@
     </style>
 </head>
 <body>
-<!-- <div class="header"><h2>Flog Nanny</h2>
-    <div class="navbar" id="navbar">
-      <ul>
-          <li><a href="Blog_layout.html">Home</a></li>
-          <li>
-              <div class="dropdown">
-                <button class="dropbtn">物種
-                </button>
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="frog.html">青蛙</a>
-                  <a href="butterfly.html">蝴蝶</a>
-                </div>
-              </div> 
-          </li>
-          <li><a href="#">Photo</a></li>
-          <li><a href="#">Search</a></li>
-          <li class="logout"><a href="#" onclick="showLoginDiv()"><span>&#8998;</span>Log out</a></li>
-      </ul>
-    </div>
-    
-</div>
 
-<div>
-
-<div id="login_div" class="login_div">
-  <form class="modal-content animate" action="../loginControl.php" method="POST">
-    <input type="hidden" name="act" value="login">
-    <div class="topcontainer">
-      <span onclick="closeLoginDiv()" class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="container first">
-        <div class="login_input">
-          <span class="login_input_icon">Username</span>
-          <input type="text" placeholder="Enter Username or Email" name="userID" required>
-        </div>
-        <div class="login_input">
-          <span class="login_input_icon">Password</span>
-          <input type="password" placeholder="Enter Password" name="password" required>
-        </div>
-        
-      <button type="submit" class="submit">Login</button>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="closeLoginDiv()" class="cancelbtn">Cancel</button>
-      <span class="password">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div> -->
 
 <div class="header py-5">
     <h1 class="py-5">Frog</h1>
@@ -234,33 +185,10 @@
     </div>
 </div>
 
-    <!-- <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div>
-    </div> -->
-    <!-- <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
-    </div> -->
+
   </div>
 </div>
-<!-- <script>
-    window.onscroll = function() {myFunction()};
 
-    var header = document.getElementById("navbar");
-    // var row = document.getElementById("row");
-    var sticky = header.offsetTop;
-    
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        header.classList.add("sticky");
-      } else {
-        header.classList.remove("sticky");
-      }
-    }
-</script>-->
 <div class="footer">
   <h2>Footer</h2>
 </div>
