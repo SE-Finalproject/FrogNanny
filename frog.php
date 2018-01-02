@@ -20,6 +20,8 @@
             background-size: cover;
         }
     </style>
+    
+    <!-- ajex API 呼叫只能用這版的 ~48 行 都是 關於 彈出警告視窗讓使用者 可以刪除 或者不要-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -117,6 +119,7 @@
                             "<p class='card-text'>特徵: ", $rs['info'] ,"</p>",
                             "<p class='card-text'>棲息地: ", $rs['place'] ,"</p>",
                             "<a href='#' class='btn btn-primary'>Go other</a>",
+                            //移植到FrogPage時 務必將這段複製過去且其中的class 務必有confirm_btn 才能 讓上面的 ajex有功能
                             "<input type='button' data-id='",$rs['id'],"' class='btn btn-primary confirm_btn' value='刪除'>",
                             "　",
                             "<a href='editFrog.php?id=",$rs['id']," 'class='btn btn-primary'>修改</a>",
