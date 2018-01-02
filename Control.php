@@ -14,6 +14,7 @@
             $place=$_REQUEST['place'];
             insertFrog($family, $genus, $species, $info, $place);
             echo $species;
+            header('Location:frog.php');
         break;
         
         case 'update' :
