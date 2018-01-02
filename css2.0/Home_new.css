@@ -4,7 +4,7 @@
 
 body {
     font: 20px 'Helvetica Neue', Arial, Sans-serif;
-    background: #f1f1f1;
+    background: rgba(247, 255, 200, 0.88);
     /*margin: 0px;*/
 }
 .header h2 {
@@ -61,20 +61,20 @@ body {
     border: none;
     outline: none;
     color: white;
-    padding: 25px 16px;
+    padding: 23px 20px;
     margin: 0;
     background-color: inherit;
     border-bottom: 3px solid transparent;
 }
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgba(99, 202, 133, 0.7);
+    background-color: rgba(19, 170, 95, 0.7);
     border-bottom: 3px solid red;
 }
 
 .dropdown-content {
     display: none; /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #deffc2;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -89,7 +89,7 @@ body {
     text-align: left;
 }
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: rgba(153, 217, 85, 0.7);
     border-bottom: 3px solid transparent;
 }
 .dropdown:hover .dropdown-content {
@@ -125,9 +125,10 @@ body {
 
 /* Fake image */
 .fakeimg {
-    background-color: rgba(170, 170, 170, 0.57);
+    background-color: rgba(190, 255, 159, 0.57);
     width: 100%;
     padding: 20px;
+    border-radius: 20px;
 }
 
 /* Add a card effect for articles */
@@ -148,7 +149,7 @@ body {
 .footer {
     padding: 20px;
     text-align: center;
-    background: #ddd;
+    background: #98d074;
     margin-top: 20px;
 }
 
@@ -162,7 +163,7 @@ body {
   width: 98.9%;
   /*width: 100%;*/
   padding-top: 0px;
-  background-color: #555;
+  background-color: #98d074;
   z-index: 2;
 }
 
