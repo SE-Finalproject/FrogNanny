@@ -1,6 +1,8 @@
 <?php
-//隱藏錯誤訊息
-    error_reporting(0);
+    //隱藏錯誤訊息
+    // error_reporting(0);
+    require("dbconnect.php");
+    global $conn;
     
     # 取得上傳檔案數量
     $fileCount = count($_FILES['image_uploads']['name']);
@@ -13,15 +15,32 @@
             echo '檔案大小: ' . ($_FILES['image_uploads']['size'][$i] / 1024) . ' KB<br/>';
             echo '暫存名稱: ' . $_FILES['image_uploads']['tmp_name'][$i] . '<br/>';
 
+           
+
             # 檢查檔案是否已經存在
             if (file_exists('img/upload/' . $_FILES['image_uploads']['name'][$i])){
                 echo '檔案已存在。<br/>';
             } else {
+                //sql~~~~ 
+                // $author=$_REQUEST['author'];
+                $path=$_FILES['image_uploads']['name'][$i];
+                // $family=$_REQUEST['family'];
+                // $genus=$_REQUEST['genus'];
+                // $species=$_REQUEST['species'];
+                $author = mysqli_real_escape_string($conn, $_REQUEST['author']);
+                $family = mysqli_real_escape_string($conn, $_REQUEST['family']);
+                $genus = mysqli_real_escape_string($conn, $_REQUEST['genus']);
+                $species = mysqli_real_escape_string($conn, $_REQUEST['species']);
+                $season = mysqli_real_escape_string($conn, $_REQUEST['season']);
+                //sql~~~~
                 $file = $_FILES['image_uploads']['tmp_name'][$i];
                 $dest = 'img/upload/' . $_FILES['image_uploads']['name'][$i];
-                echo "<br>".$dest;
+
+                $sql = "INSERT INTO photoUpload(author, path, family, genus, species, season) VALUES ('$author', '$path', '$family', '$genus', '$species', '$season')";
                 # 將檔案移至指定位置
+                
                 move_uploaded_file($file, $dest);
+                mysqli_query($conn, $sql);
             }
         } else {
             echo '錯誤代碼：' . $_FILES['image_uploads']['error'] . '<br/>';
