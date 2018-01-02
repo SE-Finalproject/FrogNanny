@@ -20,58 +20,33 @@
             background-size: cover;
         }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+                $(".confirm_btn").click(function (){  //綁定class confirm_btn讓其點擊時可以執行function
+                    console.log($(this).attr("data-id"));  
+                    if(confirm("確定要刪除齁")) {
+                        var formData = new FormData();
+                        formData.append("act", "delet");
+                        formData.append("id", $(this).attr("data-id"));
+                        $.ajax({
+                            url: 'Control.php',
+                            type: 'POST',
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            success: function ( data ) {
+                                console.log("刪除成功");
+                                location.reload(); //重新載入
+                            }
+                        });
+                    }
+                });
+        });
+    </script>
 </head>
 <body>
-<!-- <div class="header"><h2>Flog Nanny</h2>
-    <div class="navbar" id="navbar">
-      <ul>
-          <li><a href="Blog_layout.html">Home</a></li>
-          <li>
-              <div class="dropdown">
-                <button class="dropbtn">物種
-                </button>
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="frog.html">青蛙</a>
-                  <a href="butterfly.html">蝴蝶</a>
-                </div>
-              </div> 
-          </li>
-          <li><a href="#">Photo</a></li>
-          <li><a href="#">Search</a></li>
-          <li class="logout"><a href="#" onclick="showLoginDiv()"><span>&#8998;</span>Log out</a></li>
-      </ul>
-    </div>
-    
-</div>
 
-<div>
-
-<div id="login_div" class="login_div">
-  <form class="modal-content animate" action="../loginControl.php" method="POST">
-    <input type="hidden" name="act" value="login">
-    <div class="topcontainer">
-      <span onclick="closeLoginDiv()" class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="container first">
-        <div class="login_input">
-          <span class="login_input_icon">Username</span>
-          <input type="text" placeholder="Enter Username or Email" name="userID" required>
-        </div>
-        <div class="login_input">
-          <span class="login_input_icon">Password</span>
-          <input type="password" placeholder="Enter Password" name="password" required>
-        </div>
-        
-      <button type="submit" class="submit">Login</button>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="closeLoginDiv()" class="cancelbtn">Cancel</button>
-      <span class="password">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div> -->
 
 <div class="header py-5">
     <h1 class="py-5">Frog</h1>
@@ -142,8 +117,7 @@
                             "<p class='card-text'>特徵: ", $rs['info'] ,"</p>",
                             "<p class='card-text'>棲息地: ", $rs['place'] ,"</p>",
                             "<a href='#' class='btn btn-primary'>Go other</a>",
-                            "　",
-                            "<a href='Control.php?act=delet&id=",$rs['id']," 'class='btn btn-primary'>刪除</a>",
+                            "<input type='button' data-id='",$rs['id'],"' class='btn btn-primary confirm_btn' value='刪除'>",
                             "　",
                             "<a href='editFrog.php?id=",$rs['id']," 'class='btn btn-primary'>修改</a>",
                           "</div>", 
@@ -242,7 +216,6 @@
   <h2>Footer</h2>
 </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
