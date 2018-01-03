@@ -59,9 +59,5 @@
         <title>(嘿嘿其實我不會出現)</title>
     </head>
     <body>
-        <?php
-            echo "vvvvvvwww";
-        ?>
-        <!-- <a href='view.php'>執行完成，回留言板</a> -->
     </body>
 </html>
