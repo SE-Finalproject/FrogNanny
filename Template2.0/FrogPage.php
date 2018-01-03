@@ -69,7 +69,7 @@
                 
         </div>
        
-        <table class="tbspan" width="600" border="1">
+        <table class="tbspan table-dark table-hover" width="600" border="1">
 
             <tr>
                 <td>科</td>
