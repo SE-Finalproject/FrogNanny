@@ -19,9 +19,11 @@ body {
 }
 /**/
 form {
-    background: white;
+    background: rgba(169, 231, 253, 0.63);
     width: 50%;
     margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px
 }
 /*table {
     width: 100%;
