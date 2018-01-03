@@ -13,8 +13,7 @@
             $info=$_REQUEST['info'];
             $place=$_REQUEST['place'];
             insertFrog($family, $genus, $species, $info, $place);
-            echo $species;
-            header('Location:frog.php');
+            header('Location:Template2.0/FrogPage.php');
         break;
         
         case 'update' :
@@ -23,7 +22,7 @@
             $info=$_REQUEST['info'];
             $place=$_REQUEST['place'];
             updateFrog($id, $species, $info, $place);
-            header('Location:frog.php');
+            header('Location:Template2.0/FrogPage.php');
         break;
         
         case 'delet' :
@@ -31,7 +30,7 @@
             if ($id > 0) {
                 deletFrog($id);
             }
-            header('Location:frog.php');
+            header('Location:Template2.0/FrogPage.php');
         break;
     }
     
