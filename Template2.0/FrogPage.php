@@ -12,13 +12,13 @@
 </head>
 <body>
 
-<div class="container" align="center">
+<div class="container-fluid" align="center" >
     <div class="row" >
-        <div class="col-lg-11">
+        <div class="col-12 text-center">
            <button type="button" onclick="location.href='FrogUpload.php'">新增</button>
         </div>
        
-        <table align = "center" class="tbspan table-dark table-hover" width="600" border="1">
+        <table align = "center" class="tbspan table-dark table-hover"  border="1">
 
             <tr>
                 <td>科</td>
