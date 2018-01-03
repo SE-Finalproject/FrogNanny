@@ -22,7 +22,7 @@
 
     <div class="FormHeader">
         <h2 align = center>生態資料庫</h2>
-        <div class="back"><a href="Blog_layout.html" >返回</a></div>
+        <div class="back"><a href="FrogHome.html" >返回</a></div>
     </div>
     
     <div class="FormContain">

@@ -1,6 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../css2.0/photoUpload.css">
   <style type="text/css">
     img {
       max-width: 300px; 
@@ -11,69 +12,72 @@
   <script type="text/javascript" src="../javascript2.0/FrogUpload.js"></script>
 </head>
 <body onload = "load();">
-
-<form name = "theForm" method="post" enctype="multipart/form-data" action="../photoUpload.php">
-  <table>
-    <tr>
-        <td class="inputTitle">科</td>
-    </tr>
-    <tr>
-        <td>
-            <select name="family" id="family" class="tableSel" onChange="onChangeFamily();"></select>
-        </td>
-    </tr>
-    <tr>
-        <td class="inputTitle">屬</td>
-    </tr>
-    <tr>
-        <td>
-            <select name="genus" id="genus" class="tableSel" onChange="onChangeGenus();"></select>
-        </td>
-    </tr>
-    <tr>
-        <td class="inputTitle">種</td>
-    </tr>
-    <tr>
-        <td>
-            <select name="species" id="species" class="tableSel"></select>
-        </td>
-    </tr>
-    <tr>
-      <td>
-        季節：
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="season">
-      </td>
-    </tr>
-    <!-- <tr>
-      <td>拍攝時間：</td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="time">
-      </td>
-    </tr> -->
-    <tr>
-      <td>
-        作者：
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="author">
-      </td>
-    </tr>
-  </table>
-  <input type="file" id="imgupload" name="image_uploads[]" accept=".jpg, .jpeg, .png" multiple>
-  <div class="preview">
-    <p>No files currently selected for upload</p>
-  </div>
-  <input type="submit" value="Upload">
-</form>
-<script type="text/javascript" src="../javascript2.0/photoUpload.js"></script>
+    <div class="back"><a href="FrogHome.html" >返回</a></div>
+    <form name = "theForm" method="post" enctype="multipart/form-data" action="../photoUpload.php">
+      <table>
+        <tr>
+            <td class="inputTitle">科</td>
+        </tr>
+        <tr>
+            <td>
+                <select name="family" id="family" class="tableSel" onChange="onChangeFamily();"></select>
+            </td>
+        </tr>
+        <tr>
+            <td class="inputTitle">屬</td>
+        </tr>
+        <tr>
+            <td>
+                <select name="genus" id="genus" class="tableSel" onChange="onChangeGenus();"></select>
+            </td>
+        </tr>
+        <tr>
+            <td class="inputTitle">種</td>
+        </tr>
+        <tr>
+            <td>
+                <select name="species" id="species" class="tableSel"></select>
+            </td>
+        </tr>
+        <tr>
+          <td class="inputTitle">
+            季節：
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" name="season">
+          </td>
+        </tr>
+        <!-- <tr>
+          <td>拍攝時間：</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" name="time">
+          </td>
+        </tr> -->
+        <tr>
+          <td class="inputTitle">
+            作者：
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" name="author">
+          </td>
+        </tr>
+      </table>
+      <div class="upload-div">
+          <label for="imgupload" class="ChooseBtn">Choose images</label>
+            <input type="file" id="imgupload" name="image_uploads[]" accept=".jpg, .jpeg, .png" multiple>
+            <div class="preview">
+                <p>No files currently selected for upload</p>
+            </div>
+      </div>
+      <input type="submit" value="Upload">
+    </form>
+    <script type="text/javascript" src="../javascript2.0/photoUpload.js"></script>
 </body>
 </html>
 
