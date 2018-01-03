@@ -8,6 +8,19 @@
         return mysqli_query($conn, $sql);
     }
 
+    // show frog photo information
+    function getFrogPhotoInfo() {
+        global $conn;
+        $sql = "SELECT photoupload.* FROM photoupload";
+        return mysqli_query($conn, $sql);
+    }
+    
+    function getFrogPhotoInfoID($id) {
+        global $conn;
+        $sql = "SELECT photoupload.* FROM photoupload where id = $id";
+        return mysqli_query($conn, $sql);
+    }
+
     function insertFrog($family='', $genus='', $species='', $info='', $place='') {
         global $conn;
 
