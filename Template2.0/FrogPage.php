@@ -12,19 +12,13 @@
 </head>
 <body>
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-9 mb-sm-3">
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            
+<div class="container" align="center">
+    <div class="row" >
+        <div class="col-lg-11">
            <button type="button" onclick="location.href='FrogUpload.php'">新增</button>
-           &nbsp
-              
-              
-                
         </div>
        
-        <table class="tbspan table-dark table-hover" width="600" border="1">
+        <table align = "center" class="tbspan table-dark table-hover" width="600" border="1">
 
             <tr>
                 <td>科</td>
