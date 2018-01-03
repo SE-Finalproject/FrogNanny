@@ -1,0 +1,17 @@
+.btn {
+    border: none; /* Remove borders */
+    color: white; /* Add a text color */
+    padding: 3px 10px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+    margin: 1px 5px;
+    border: 1px black solid;
+    border-radius: 5px;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
+}
+.warning {background-color: #ff9800;} /* Orange */
+.warning:hover {background: #e68a00;}
+
+.link {
+    text-decoration: none;
+    color: white;
+}

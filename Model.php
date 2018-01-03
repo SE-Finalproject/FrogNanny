@@ -54,6 +54,19 @@
         }
     }
 
+    function modifyFrogPhotoInfo($id, $gpsX, $gpsY) {
+        global $conn;
+
+        $gpsX = mysqli_real_escape_string($conn, $gpsX);
+        $gpsY = mysqli_real_escape_string($conn, $gpsY);
+        $id = (int)$id;
+
+        if ($id) { //if species is not empty
+            $sql = "UPDATE photoupload set gpsX ='$gpsX', gpsY = '$gpsY' WHERE id = $id;";
+        mysqli_query($conn, $sql) or die("Insert failed, SQL query error"); //執行SQL
+        }
+    }
+
     function deletFrog($id){
         global $conn;
         

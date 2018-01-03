@@ -1,3 +1,9 @@
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css2.0/showphoto.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+</head>
+
 <?php
     require("Model.php");
 
@@ -24,7 +30,8 @@
                     ".$rs['species'].",
                     ".$rs['season'].",
                     ".$rs['date']."'>
-                    <td>".$rs['species']."</td></div>";
+                    <td>".$rs['species']."</td>
+                    <button class='btn warning'><a href='../editshowphoto.php?id=",$rs['id'],"' class='link'>修改</a></button></div>";
 
             }
             
