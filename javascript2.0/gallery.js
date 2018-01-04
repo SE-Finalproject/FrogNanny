@@ -28,16 +28,16 @@ function showpics() {
 //show self photo
 function showPhoto(){
     // Create
-    var $show_self_photo = $("<div class='show_self_photo'></div>");
-    var $img = $("<img>");
-    var $caption = $("<p class='caption'></p>");
+    var show_self_photo = $("<div class='show_self_photo'></div>");
+    var img = $("<img>");
+    var caption = $("<p class='caption'></p>");
 
     // Add image and caption to show_self_photo
-    $show_self_photo
-        .append($img)
-        .append($caption);
+    show_self_photo
+        .append(img)
+        .append(caption);
     // 
-    $('body').append($show_self_photo);
+    $('body').append(show_self_photo);
 
     //didn't useQQ // $('.gallery img').click(function(e) {
     $('.gallery').on("click", "img", function(e) {
@@ -53,14 +53,14 @@ function showPhoto(){
             str += `<span>${value}</span><br/>`;
         }
         // 
-        $img.attr('src', src);
-        $caption.html(str);
+        img.attr('src', src);
+        caption.html(str);
 
         // Show 
-        $show_self_photo.fadeIn('fast');
+        show_self_photo.fadeIn('fast');
 
-        $show_self_photo.click(function() {
-            $show_self_photo.fadeOut('fast');
+        show_self_photo.click(function() {
+            show_self_photo.fadeOut('fast');
         });
     });
 }
