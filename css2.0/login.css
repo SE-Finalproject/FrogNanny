@@ -39,7 +39,7 @@
     position: relative;
 }
 
-.container {
+.loginContainer {
     position: relative;
     padding: 16px;
 }
@@ -48,7 +48,7 @@
 }
 span.password {
     float: right;
-    padding-top: 16px;
+    padding: 16px;
 }
 
 /* The login_div (background) 整個版面*/
