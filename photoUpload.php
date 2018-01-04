@@ -28,16 +28,18 @@
                 $family = mysqli_real_escape_string($conn, $_REQUEST['family']);
                 $genus = mysqli_real_escape_string($conn, $_REQUEST['genus']);
                 $species = mysqli_real_escape_string($conn, $_REQUEST['species']);
-                $season = mysqli_real_escape_string($conn, $_REQUEST['season']);
+                $findTime = mysqli_real_escape_string($conn, $_REQUEST['findTime']);
                 //sql~~~~
                 $file = $_FILES['image_uploads']['tmp_name'][$i];
                 $dest = 'img/upload/' . $_FILES['image_uploads']['name'][$i];
 
-                $sql = "INSERT INTO photoUpload(author, path, family, genus, species, season) VALUES ('$author', '$path', '$family', '$genus', '$species', '$season')";
+                $sql = "INSERT INTO photoUpload(author, path, family, genus, species, findTime) VALUES ('$author', '$path', '$family', '$genus', '$species', '$findTime')";
                 # 將檔案移至指定位置
                 
                 move_uploaded_file($file, $dest);
                 mysqli_query($conn, $sql);
+                // header('Location:FrogHome.php');
+                echo "<script>history.go(-2);</script>";
             }
         } else {
             echo '錯誤代碼：' . $_FILES['image_uploads']['error'] . '<br/>';
