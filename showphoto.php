@@ -28,7 +28,7 @@
                     <img src='../$dirname/$files[$i]' style='width:75%' alt='
                     author : ".$rs['author'].",
                     ".$rs['species'].",
-                    ".$rs['season'].",
+                    ".$rs['findTime'].",
                     ".$rs['date']."'>
                     <td>".$rs['species']."</td>
                     <button class='btn warning'><a href='../editshowphoto.php?id=",$rs['id'],"' class='link'>修改</a></button></div>";
