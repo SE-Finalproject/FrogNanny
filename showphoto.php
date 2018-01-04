@@ -3,7 +3,6 @@
     <link rel="stylesheet" type="text/css" href="../css2.0/showphoto.css">
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
 </head>
-
 <?php
     require("Model.php");
 
@@ -15,12 +14,12 @@
             for($i = 0; $i < sizeof($pictype); $i++) {
                 if(strstr($file, ".".$pictype[$i])) {
                     $files[] = $file;
-
                 }
             }
         }
         for($i = 0; $i < sizeof($files); $i++) {
-            $results = getFrogPhotoInfoID($i+1);
+            $results = getFrogPhotoInfoID($files[$i]);
+            echo $files[$i];
             if ($rs = mysqli_fetch_array($results)) {
                 $j = $i + 1;
                 $size = sizeof($files);
@@ -32,7 +31,6 @@
                     ".$rs['date']."'>
                     <td>".$rs['species']."</td>
                     <button class='btn warning'><a href='../editshowphoto.php?id=",$rs['id'],"' class='link'>修改</a></button></div>";
-
             }
             
         }
