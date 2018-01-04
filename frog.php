@@ -2,7 +2,11 @@
 <?php
     require_once('dbconnect.php');
     $sql = " SELECT * FROM `frogrecord` WHERE `family` = '樹蛙科'  ";
-    $result = mysqli_query($conn , $sql)
+    $result = mysqli_query($conn , $sql);
+    $sql02 = "SELECT frogrecord.* FROM frogrecord WHERE family = '蟾蜍科'";
+    $result02 = mysqli_query($conn, $sql02);
+    $sql03 = "SELECT frogrecord.* FROM frogrecord WHERE family = '赤蛙科'";
+    $result03 = mysqli_query($conn, $sql03);
 ?>
 <html>
 <head>
@@ -134,48 +138,42 @@
               </div>
               <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                 <div class="row">
-                  <div class="col-md-6 mb-2">
-                    <div class="card">
-                      <div class="card-body">
-                        <h4 class="card-title">海蟾蜍</h4>
-                        <p class="card-text">特徵: 大大的</p>
-                        <p class="card-text">棲息地: 海海的</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-2">
-                    <div class="card">
-                      <div class="card-body">
-                        <h4 class="card-title">Special title treatment</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
+                <?php
+                    while($rs02 = mysqli_fetch_array($result02)) {
+                      echo "<div class='col-md-6 mb-2'>
+                        <div class='card'>
+                          <div class='card-body'>
+                            <h4 class='card-title'>", $rs02['species'], "</h4>
+                            <p class='card-text'>科別: ", $rs02['family'], "</p>
+                            <p class='card-text'>屬種: ", $rs02['genus'], "</p>
+                            <p class='card-text'>特徵: ", $rs02['info'], "</p>
+                            <p class='card-text'>棲息地: ", $rs02['place'], "</p>
+                            <a href='#' class='btn btn-primary'>Go somewhere</a>
+                          </div>
+                        </div>
+                      </div>";
+                    }
+                ?>
                 </div>
               </div>
               <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                 <div class="row">
-                  <div class="col-md-6 mb-2">
-                    <div class="card">
-                      <div class="card-body">
-                        <h4 class="card-title">金線蛙</h4>
-                        <p class="card-text">特徵: 金金的</p>
-                        <p class="card-text">棲息地: 水水的</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-2">
-                    <div class="card">
-                      <div class="card-body">
-                        <h4 class="card-title">Special title treatment</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
+                <?php
+                    while($rs03 = mysqli_fetch_array($result03)) {
+                      echo "<div class='col-md-6 mb-2'>
+                        <div class='card'>
+                          <div class='card-body'>
+                            <h4 class='card-title'>", $rs03['species'], "</h4>
+                            <p class='card-text'>科別: ", $rs03['family'], "</p>
+                            <p class='card-text'>屬種: ", $rs03['genus'], "</p>
+                            <p class='card-text'>特徵: ", $rs03['info'], "</p>
+                            <p class='card-text'>棲息地: ", $rs03['place'], "</p>
+                            <a href='#' class='btn btn-primary'>Go somewhere</a>
+                          </div>
+                        </div>
+                      </div>";
+                    }
+                ?>
                 </div>
               </div>
             </div>
