@@ -17,7 +17,7 @@
     
     function getFrogPhotoInfoID($id) {
         global $conn;
-        $sql = "SELECT photoupload.* FROM photoupload where id = $id";
+        $sql = "SELECT photoupload.* FROM photoupload where id = '$id'";
         return mysqli_query($conn, $sql);
     }
 
@@ -56,7 +56,6 @@
 
     function modifyFrogPhotoInfo($id, $gpsX, $gpsY) {
         global $conn;
-
         $gpsX = mysqli_real_escape_string($conn, $gpsX);
         $gpsY = mysqli_real_escape_string($conn, $gpsY);
         $id = (int)$id;
@@ -77,13 +76,39 @@
         return mysqli_query($conn, $sql); //執行SQL
     }
 
+    //gallery show pic
+    function showpics() {
+        global $conn;
+        
+        $sql = "SELECT photoupload.* FROM photoupload";
+        $result = mysqli_query($conn, $sql);
+        $data = array();
+        $array = array();
+        while($rs = mysqli_fetch_assoc($result)) {
+            $data["id"] = $rs["id"];
+            $data["author"] = $rs["author"];
+            $data["path"] = $rs["path"];
+            $data["family"] = $rs["family"];
+            $data["genus"] = $rs["genus"];
+            $data["species"] = $rs["species"];
+            array_push($array, $data);
+        }
+        return $array;
+        // $dirname="img/upload";
+        // $pictype = array("jpg", "png", "jpeg", "gif");
+        // $files = array();
+        // if($handle = opendir($dirname)) {
+        //     while(false !== ($file = readdir($handle))) {
+        //         for($i = 0; $i < sizeof($pictype); $i++) {
+        //             if(strstr($file, ".".$pictype[$i])) {
+        //                 $files[] = $file;
+        //             }
+        //         }
+        //     }
+        //     return $files;
+        //     closedir($handle);
+        // }
+
+    }
+
 ?>
-<!DOCTYPE>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>(嘿嘿其實我不會出現)</title>
-    </head>
-    <body>
-    </body>
-</html>
