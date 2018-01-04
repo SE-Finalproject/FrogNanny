@@ -9,8 +9,8 @@ function FrogData(){
 
     var A = new Array();
     var i = 0;
-    A[i++] = new node("原指樹蛙屬", ["中國樹蟾", "艾氏樹蛙"]);
-    A[i++] = new node("樹蛙屬 ", ["橙腹樹蛙", "台北樹蛙", "橙腹樹蛙", "橙腹樹蛙", "莫氏樹蛙"]);
+    A[i++] = new node("原指樹蛙屬", ["面天樹蛙", "艾氏樹蛙"]);
+    A[i++] = new node("樹蛙屬 ", ["橙腹樹蛙", "台北樹蛙", "翡翠樹蛙", "諸羅樹蛙", "莫氏樹蛙"]);
     A[i++] = new node("泛樹蛙屬", ["布氏樹蛙"]);
     A[i++] = new node("溪樹蛙屬", ["褐樹蛙 ", "日本樹蛙"]);
 
@@ -20,7 +20,7 @@ function FrogData(){
 
     var C = new Array();
     var i = 0;
-    C[i++] = new node("姬蛙屬", ["黑蒙西氏小雨蛙", "小雨蛙", "巴氏小雨蛙 "]);
+    C[i++] = new node("姬蛙屬", ["黑蒙西氏小雨蛙", "小雨蛙", "巴氏小雨蛙"]);
     C[i++] = new node("小姬蛙屬 ", ["史丹吉氏小雨蛙"]);
 
     var D = new Array();
@@ -44,6 +44,16 @@ function FrogData(){
     G[i++] = new node("臭蛙屬", ["斯文豪氏蛙"]);
     G[i++] = new node("蛙屬", ["長腳赤蛙", "梭德氏赤蛙"]);
 
+    var H = new Array();
+    var i = 0;
+    H[i++] = new node("虎紋蛙屬", ["虎皮蛙"]);
+    H[i++] = new node("陸蛙屬", ["海蛙", "澤蛙"]);
+
+    var I = new Array();
+    var i = 0;
+    I[i++] = new node("曼蛙屬", ["馬達加斯加彩蛙", "金蛙", "綠彩蛙"]);
+
+
     //科
     var family = new Array();
     var i = 0;
@@ -54,6 +64,8 @@ function FrogData(){
     family[i++] = new node("細趾蟾科", E);
     family[i++] = new node("蟾蜍科", F);
     family[i++] = new node("赤蛙科", G);
+    family[i++] = new node("叉舌蛙科", H);
+    family[i++] = new node("彩蛙科", I);
 
     return(family);
 }

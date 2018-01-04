@@ -33,7 +33,14 @@
             $place = mysqli_real_escape_string($conn, $place);
 
             $sql = "INSERT INTO frogRecord (family, genus, species, info, place) VALUES ('$family', '$genus', '$species', '$info', '$place')";
-            return mysqli_query($conn, $sql);
+            
+            // $result = mysqli_error();
+            if(mysqli_query($conn, $sql)) {
+                return 1;
+            } else {
+                return 0;
+            }
+            
         } else {
             echo "蝦";
             return false;
