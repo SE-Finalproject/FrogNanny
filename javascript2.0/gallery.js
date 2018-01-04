@@ -30,11 +30,16 @@ $(function() {
 
         // Get image link and description
         var src = $(this).attr("src");
-        var cap = $(this).attr("alt");
+        var cap = $(this).attr("alt").split(",");
 
+        // change line
+        let str = '';
+        for(let value of cap) {
+            str += `<span>${value}</span><br/>`;
+        }
         // 
         $img.attr('src', src);
-        $caption.text(cap);
+        $caption.html(str);
 
         // Show 
         $show_self_photo.fadeIn('fast');
