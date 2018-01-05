@@ -2,7 +2,6 @@
     session_start();
     require("../Model.php");
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,49 +12,33 @@
     <script type="text/javascript" src="../javascript2.0/RowSpan.js"></script>
 </head>
 <body>
-
-<div class="container-fluid" align="center" >
-    <div class="row" >
-        <div class="col-12 text-center">
-           <button type="button" onclick="location.href='FrogUpload.php'">新增</button>
+    <div class="container-fluid" align="center" >
+        <div class="row" >
+            <div class="col-12 text-center">
+               <button type="button" onclick="location.href='FrogUpload.php'">新增</button>
+            </div>
+            <table align = "center" class="list table-dark table-hover"  border="1">
+                <tr>
+                    <td>科</td>
+                    <td>屬</td>
+                    <td>種</td>
+                    <td>資訊</td>
+                    <td>棲息地</td>
+                </tr>
+                <?php
+                    $results = getFrogList();
+                    while ($rs = mysqli_fetch_array($results)) {
+                        echo "<tr><td>", $rs['family'], "<br/>",
+                        "</td><td>", $rs['genus'],
+                        "</td><td>", $rs['species'],
+                        "</td><td>", $rs['info'],
+                        "</td><td>", $rs['place'],
+                        "</td></tr>";
+                    }
+                ?>
+            </table>
         </div>
-       
-        <table align = "center" class="list table-dark table-hover"  border="1">
-
-            <tr>
-                <td>科</td>
-                <td>屬</td>
-                <td>種</td>
-                <td>資訊</td>
-                <td>棲息地</td>
-            </tr>
-            <?php
-                $results = getFrogList();
-                while ($rs = mysqli_fetch_array($results)) {
-                    echo "<tr><td>", $rs['family'], "<br/>",
-                    "</td><td>", $rs['genus'],
-                    "</td><td>", $rs['species'],
-                    "</td><td>", $rs['info'],
-                    "</td><td>", $rs['place'],
-                    "</td></tr>";
-                }
-            ?>
-
-        </table>
-
     </div>
-</div>
-
-
-  </div>
-</div>
-
-
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-        </script>
     </body>
 </html>
 
