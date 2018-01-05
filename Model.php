@@ -69,7 +69,7 @@
 
         if ($id) { //if species is not empty
             $sql = "UPDATE photoupload set gpsX ='$gpsX', gpsY = '$gpsY' WHERE id = $id;";
-        mysqli_query($conn, $sql) or die("Insert failed, SQL query error"); //執行SQL
+            mysqli_query($conn, $sql) or die("Insert failed, SQL query error"); //執行SQL
         }
     }
 
