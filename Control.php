@@ -49,10 +49,11 @@
 
         case 'delet' :
             $id = (int)$_REQUEST['id'];
+            console.log($id);
             if ($id > 0) {
                 deletFrog($id);
             }
-            header('Location:Template2.0/FrogPage.php');
+            //header('Location:Template2.0/FrogPage.php');
         break;
     }
     
