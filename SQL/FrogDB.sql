@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- 主機: 127.0.0.1
--- 產生時間： 2018-01-03 16:16:14
--- 伺服器版本: 10.1.26-MariaDB
--- PHP 版本： 7.1.9
+-- 主機: localhost
+-- 產生時間： 2018 年 01 月 06 日 03:25
+-- 伺服器版本: 10.1.25-MariaDB
+-- PHP 版本： 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- 資料庫： `frog`
+-- 資料庫： `FrogDB`
 --
 
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `frogrecord`
+-- 資料表結構 `frogRecord`
 --
 
 CREATE TABLE `frogRecord` (
@@ -82,17 +82,17 @@ INSERT INTO `frogRecord` (`id`, `family`, `genus`, `species`, `info`, `place`) V
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `photoupload`
+-- 資料表結構 `photoUpload`
 --
 
-CREATE TABLE `photoupload` (
+CREATE TABLE `photoUpload` (
   `id` int(11) NOT NULL,
   `author` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `path` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `family` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `genus` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `species` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `season` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `findTime` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `gpsX` int(15) NOT NULL,
   `gpsY` int(15) NOT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -102,9 +102,10 @@ CREATE TABLE `photoupload` (
 -- 資料表的匯出資料 `photoUpload`
 --
 
-INSERT INTO `photoUpload` (`id`, `author`, `path`, `family`, `genus`, `species`, `season`, `gpsX`, `gpsY`, `date`) VALUES
+INSERT INTO `photoUpload` (`id`, `author`, `path`, `family`, `genus`, `species`, `findTime`, `gpsX`, `gpsY`, `date`) VALUES
 (1, 'zong', '2-6.jpg', '赤蛙科', '水蛙屬', '拉都希氏蛙', 'four seasons', 0, 0, '2018-01-02 23:53:26'),
-(2, 'marjiready', '金線蛙.JPG', '赤蛙科', '側褶蛙屬', '金線蛙', 'gold season', 0, 0, '2018-01-03 22:56:15');
+(2, 'givon', '2-7.jpg', '赤蛙科', '臭蛙屬', '斯文豪氏蛙', 'four seasons', 0, 0, '2018-01-04 16:42:31'),
+(3, 'marjiread', '金線蛙.JPG', '赤蛙科', '側褶蛙屬', '金線蛙', 'gold season', 0, 0, '2018-01-06 06:46:56');
 
 -- --------------------------------------------------------
 
@@ -160,19 +161,16 @@ ALTER TABLE `user`
 --
 ALTER TABLE `frogRecord`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
-
 --
 -- 使用資料表 AUTO_INCREMENT `photoUpload`
 --
 ALTER TABLE `photoUpload`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- 使用資料表 AUTO_INCREMENT `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
