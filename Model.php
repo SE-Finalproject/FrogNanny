@@ -83,6 +83,15 @@
         return mysqli_query($conn, $sql); //執行SQL
     }
 
+    // delete frog photo show in gallery
+    function deleteFrogPhoto($id) {
+        global $conn;
+
+        $id = (int)$id;
+        $sql = "DELETE FROM photoupload where id = $id;";
+        return mysqli_query($conn, $sql);
+    }
+
     //gallery show pic
     function showpics() {
         global $conn;

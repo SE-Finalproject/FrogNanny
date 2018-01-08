@@ -55,6 +55,15 @@
             }
             //header('Location:Template2.0/FrogPage.php');
         break;
+
+        case 'deletePhoto' :
+            $id = (int)$_REQUEST['id'];
+            console.log($id);
+            if ($id > 0) {
+                deleteFrogPhoto($id);
+            }
+            header('Location:Template2.0/gallery.html');
+        break;
     }
     
 ?>
