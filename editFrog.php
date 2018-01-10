@@ -1,21 +1,19 @@
 <?php
-session_start();
-require("dbconnect.php");
-//$id = (int)$_POST['id'];
-//$id = (int)$_GET['id'];
-$id = (int)$_REQUEST['id'];
-$sql = "select * from frogrecord where id=$id;";
-$result=mysqli_query($conn,$sql) or die("DB Error: Cannot retrieve Frog."); //執行SQL查詢
-if ($rs=mysqli_fetch_assoc($result)) {
-	$genus = $rs ['genus'];
-    $family = $rs ['family'];
-    $species = $rs['species'];
-	$info= $rs['info'];
-	$place = $rs['place'];
-} else {
-	echo "Your id is wrong!!";
-	exit(0);
-}
+    session_start();
+    require("dbconnect.php");
+    $id = (int)$_REQUEST['id'];
+    $sql = "select * from frogrecord where id = $id;";
+    $result=mysqli_query($conn,$sql) or die("DB Error: Cannot retrieve Frog."); //執行SQL查詢
+    if ($rs=mysqli_fetch_assoc($result)) {
+        $genus = $rs ['genus'];
+        $family = $rs ['family'];
+        $species = $rs['species'];
+        $info= $rs['info'];
+        $place = $rs['place'];
+    } else {
+        echo "Your id is wrong!!";
+        exit(0);
+    }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -32,9 +30,9 @@ if ($rs=mysqli_fetch_assoc($result)) {
       Frog info: <input name="info" type="text" id="info" value="<?php echo $info;?>" /> <br>
 
       Frog place: <input name="place" type="text" id="place" value="<?php echo $place;?>" /> <br>
-	  
+      
       <input type="submit" name="Submit" value="送出" />
-	</form>
+    </form>
   </tr>
 </table>
 </body>

@@ -14,7 +14,9 @@ function showpics() {
             var result = JSON.parse(data);
             console.log(result);
             for (var i = 0; i < result.length; i++) {
-                var image = "<div><div class='numbertext'></div><img src='../img/upload/"+result[i].path+"' style='width:100%' alt='作者:"+result[i].author+" 科:"+result[i].family+" 種:"+result[i].species+"'><td>"+result[i].species+"</td><button class='btn warning'><a href='../editshowphoto.php?id="+result[i].id+"' class='link'>修改</a></button><a href='../Control.php?act=deletePhoto&id="+result[i].id+"'><input type = 'button' value = '刪除'></a></div>";
+                var image = "<div><div class='numbertext'></div><img src='../img/upload/"+result[i].path+"' style='width:100%' alt='作者:"+result[i].author+" 科:"+result[i].family+" 種:"+result[i].species+"'><td>"+result[i].species+"</td><button class='btn warning'><a href='../editshowphoto.php?id="+result[i].id+
+                "' class='link'>修改</a></button><a href='../Control.php?act=deletePhoto&id="+result[i].id+
+                "'><input type = 'button' value = '刪除'></a></div>";
                 // console.log(image);
                 $(".gallery").append(image);
             }
